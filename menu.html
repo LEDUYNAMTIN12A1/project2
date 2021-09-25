@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Menu Đa cấp</title>
+    <style type="text/css">
+    	* {
+    		margin: 0px;
+    		padding: 0px;
+    	}
+    	body{
+    	    font-family: tahoma;
+    	    font-size: 16px;
+    	}
+    	#menu{
+    		width: 650px;
+    		height: 40px;
+    		background: #6d136a;
+    		margin: 50px auto;
+    	}
+    	ul.root > li{
+    		list-style: none;
+    		float: left;
+    		position: relative;
+    	}
+    	ul.root > li > a{
+    		text-decoration: none;
+    		color: #FFF;
+    		padding: 0px 15px 0px 15px;
+    		line-height: 40px;
+    		display: block;
+    	}
+    	ul.root > li > a:hover {
+    		background: orange;
+    		color: red;
+    		transition: ease-in 0.60s;
+    		-moz-transition: ease-in 0.60s;
+    		-webkit-transition: ease-in 0.60s;
+    	}
+    	ul.sumenu{
+    		width: 250px;
+    		background: #6d136a;
+    		min-height: 150px;
+    		display: none;
+    		position: absolute;
+    	}
+    	ul.sumenu li{
+    		list-style: none;
+    	}
+    	ul.sumenu li a{
+    		color: #FFF;
+    		text-decoration: none;
+    		display: block;
+    		border-top: 1px solid #ccc;
+    		line-height: 40px;
+    		text-indent: 10px;
+    	}
+    	#menu ul > li:hover ul.sumenu{
+    		display: block;
+    	}
+    	ul.sumenu li a:hover{
+    		background: orange;
+    		color: red;
+    		transition: ease-in 0.35s;
+    		-moz-transition:  ease-in 0.35s;
+    		-webkit-transition : ease-in 0.35s
+    	}
+    	ul.root > li:hover ul.sumenu{
+    		display: block;
+    		opacity: 1;
+    		transition: ease-out 0.35s;
+    		-webkit-transition:  ease-out 0.35s;
+    	}
+    </style>
+</head>
+<body>
+	<div id="menu">
+		<ul class="root">
+			<li><a href="">Home</li>
+			<li><a href="">About</li>
+			<li><a href="">Products
+				<ul class ="sumenu">
+					<li><a href="">item 1</a></li>
+					<li><a href="">item 2</a></li>
+					<li><a href="">item 3</a></li>
+				</ul>
+			</li>
+			<li><a href="">Service</li>
+			<li><a href="">Contact</li>
+		</ul>
+	</div>
+</body>
+</html>
